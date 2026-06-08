@@ -1,0 +1,234 @@
+/* ============================================================
+   MEC TECH — Foundations: Color & Type
+   Meccanica di precisione · industrial / precise / dynamic
+   Import this file, then use the CSS custom properties below.
+   Fonts loaded via Google Fonts (see @import).
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  /* ---------- BRAND COLOR — NAVY (dominant) ---------- */
+  --navy-900: #0E1626;   /* deepest — full-bleed dark sections */
+  --navy-800: #131F33;
+  --navy-700: #1B2A47;   /* ★ BASE brand navy — dominant surface */
+  --navy-600: #243755;
+  --navy-500: #324A6E;   /* lines / dividers on dark */
+
+  /* ---------- BRAND COLOR — SKY / AZZURRO (accompaniment) ---------- */
+  --sky-100: #EAF2F7;    /* tint backgrounds on light */
+  --sky-200: #D3E4EE;
+  --sky-300: #B8D4E3;    /* ★ BASE light blue */
+  --sky-400: #8FB8CE;
+
+  /* ---------- ACCENT — ARANCIO (focal points ONLY) ---------- */
+  --orange-600: #C73A06; /* pressed / darker hover */
+  --orange-500: #E8460A; /* ★ BASE accent */
+  --orange-400: #FF6A33; /* highlight on dark */
+
+  /* ---------- NEUTRALS — GRAFITE ---------- */
+  --ink-900: #14181F;    /* strongest text */
+  --ink-700: #3A4250;    /* body text */
+  --ink-500: #6B7480;    /* secondary text / captions */
+  --ink-300: #B9C0C9;    /* borders / disabled */
+  --ink-100: #EEF1F4;    /* hairlines / subtle fills */
+  --paper:   #F7F8FA;    /* off-white page */
+  --white:   #FFFFFF;
+
+  /* ---------- SEMANTIC ROLES ---------- */
+  --bg:            var(--white);
+  --bg-muted:      var(--paper);
+  --bg-tint:       var(--sky-100);
+  --bg-dark:       var(--navy-700);
+  --bg-darkest:    var(--navy-900);
+
+  --fg:            var(--ink-900);   /* primary text on light */
+  --fg-soft:       var(--ink-700);
+  --fg-muted:      var(--ink-500);
+  --fg-on-dark:    var(--white);     /* primary text on navy */
+  --fg-on-dark-soft: var(--sky-300);
+
+  --accent:        var(--orange-500);
+  --accent-hover:  var(--orange-600);
+  --accent-on-dark:var(--orange-400);
+
+  --line:          var(--ink-100);   /* hairline on light */
+  --line-strong:   var(--ink-300);
+  --line-on-dark:  var(--navy-500);
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif; /* headings — condensed, industrial */
+  --font-body:    'Barlow', system-ui, sans-serif;                /* body / UI */
+  --font-mono:    'Space Mono', ui-monospace, monospace;          /* tech data: codes, tolerances */
+
+  /* ---------- TYPE SCALE (fluid) ---------- */
+  --fs-display: clamp(3.25rem, 6vw, 5.5rem);  /* hero / stat numbers */
+  --fs-h1:      clamp(2.5rem, 4.5vw, 4rem);
+  --fs-h2:      clamp(1.9rem, 3vw, 2.75rem);
+  --fs-h3:      clamp(1.4rem, 2vw, 1.85rem);
+  --fs-h4:      1.25rem;
+  --fs-lead:    1.25rem;   /* intro paragraph */
+  --fs-body:    1.0625rem;
+  --fs-small:   0.9375rem;
+  --fs-eyebrow: 0.8125rem; /* uppercase label */
+  --fs-caption: 0.75rem;
+
+  --lh-tight:   1.02;
+  --lh-snug:    1.18;
+  --lh-body:    1.6;
+
+  --tracking-display: -0.01em;
+  --tracking-eyebrow: 0.18em;  /* wide-tracked uppercase labels */
+  --tracking-mono:    0.02em;
+
+  /* ---------- SPACING (4px base) ---------- */
+  --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;  --sp-4: 16px;
+  --sp-5: 24px;  --sp-6: 32px;  --sp-7: 48px;  --sp-8: 64px;
+  --sp-9: 96px;  --sp-10: 128px;
+
+  /* ---------- GEOMETRY — angular only ---------- */
+  --radius-0: 0px;      /* default — sharp corners */
+  --radius-1: 2px;      /* MAX radius on decorative elements */
+  --diag: 18px;         /* default diagonal cut depth for clip-paths */
+
+  /* ---------- ELEVATION (restrained, hard-ish) ---------- */
+  --shadow-sm: 0 1px 2px rgba(14,22,38,0.08);
+  --shadow-md: 0 6px 18px rgba(14,22,38,0.10);
+  --shadow-lg: 0 18px 40px rgba(14,22,38,0.16);
+  --shadow-accent: 6px 6px 0 var(--orange-500); /* signature hard offset */
+  --shadow-navy:   6px 6px 0 var(--navy-700);
+
+  /* ---------- MOTION ---------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur: 280ms;
+  --dur-slow: 600ms;
+
+  /* ---------- SIGNATURE CLIP-PATHS (corner cuts / diagonals) ---------- */
+  --clip-cut-tr: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%); /* top-right corner cut */
+  --clip-cut-bl: polygon(0 0, 100% 0, 100% 100%, 28px 100%, 0 calc(100% - 28px)); /* bottom-left corner cut */
+  --clip-diag-down: polygon(0 0, 100% 0, 100% calc(100% - 48px), 0 100%);          /* slanted bottom \ */
+  --clip-diag-up:   polygon(0 48px, 100% 0, 100% 100%, 0 100%);                    /* slanted top  / */
+  --clip-blade:     polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  /* dramatic full-section splits (brochure signature) */
+  --clip-split-tl:  polygon(0 0, 100% 0, 100% 62%, 0 100%);   /* big diagonal, low-left */
+  --clip-split-tr:  polygon(0 0, 100% 0, 100% 100%, 0 62%);   /* big diagonal, low-right */
+  --clip-wedge:     polygon(0 0, 100% 14%, 100% 100%, 0 86%); /* parallelogram band */
+}
+
+/* ============================================================
+   SIGNATURE UTILITIES (brochure-faithful)
+   ============================================================ */
+/* Orange right-pointing triangle bullet — the brand's list marker */
+.mt-bullet {
+  width: 0; height: 0; flex: none;
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent var(--orange-500);
+}
+.mt-bullet-lg { border-width: 9px 0 9px 15px; }
+
+/* Vertical rotated edge label (e.g. "EVOLVING PRECISION") */
+.mt-vlabel {
+  writing-mode: vertical-rl;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+/* Triangle-bulleted list */
+ul.mt-list { list-style: none; margin: 0; padding: 0; }
+ul.mt-list > li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+ul.mt-list > li::before {
+  content: ""; position: absolute; left: 0; top: 0.45em;
+  width: 0; height: 0;
+  border-style: solid; border-width: 6px 0 6px 10px;
+  border-color: transparent transparent transparent var(--orange-500);
+}
+
+/* ============================================================
+   BASE ELEMENT STYLES (semantic)
+   ============================================================ */
+.mt-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+h1, .mt-h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
+  color: var(--fg);
+  margin: 0;
+}
+h2, .mt-h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  text-transform: uppercase;
+  color: var(--fg);
+  margin: 0;
+}
+h3, .mt-h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  color: var(--fg);
+  margin: 0;
+}
+h4, .mt-h4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--fs-h4);
+  color: var(--fg);
+  margin: 0;
+}
+.mt-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--fg);
+}
+.mt-lead {
+  font-family: var(--font-body);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-body);
+  color: var(--fg-soft);
+}
+p, .mt-body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg-soft);
+}
+.mt-small { font-size: var(--fs-small); }
+.mt-mono {
+  font-family: var(--font-mono);
+  letter-spacing: var(--tracking-mono);
+}
+.mt-stat-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-display);
+  line-height: 0.9;
+  letter-spacing: var(--tracking-display);
+  font-variant-numeric: tabular-nums;
+}
