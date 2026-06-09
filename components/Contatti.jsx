@@ -4,6 +4,8 @@ function Contatti() {
   const [form, setForm] = useStateContatti({ nome: "", azienda: "", email: "", tel: "", settore: "", msg: "" });
   const [errors, setErrors] = useStateContatti({});
   const [sent, setSent] = useStateContatti(false);
+  const [sending, setSending] = useStateContatti(false);
+  const [sendError, setSendError] = useStateContatti("");
 
   const scope = MT.useGsap(() => {MT.revealUp(scope.current, { stagger: 0.1 });}, []);
 
@@ -21,13 +23,26 @@ function Contatti() {
     return err;
   };
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
     const err = validate();
     setErrors(err);
-    if (Object.keys(err).length === 0) {
+    if (Object.keys(err).length > 0) return;
+    setSending(true);
+    setSendError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
       setSent(true);
       gsap.fromTo(".form-success", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 });
+    } catch {
+      setSendError("Invio non riuscito. Riprova o scrivi a info@mectech.srl.");
+    } finally {
+      setSending(false);
     }
   };
 
@@ -102,7 +117,8 @@ function Contatti() {
                   <textarea className={errors.msg ? "invalid" : ""} rows="4" value={form.msg} onChange={set("msg")} placeholder="Descrivi il particolare, le quantità e le tolleranze richieste…"></textarea>
                   {errors.msg && <span className="err">{errors.msg}</span>}
                 </div>
-                <button type="submit" className="btn btn-primary btn-lg">Invia richiesta →</button>
+                {sendError && <div className="form-error" style={{color:"#e74c3c",marginBottom:"12px"}}>{sendError}</div>}
+                <button type="submit" className="btn btn-primary btn-lg" disabled={sending}>{sending ? "Invio in corso…" : "Invia richiesta →"}</button>
               </form> :
 
             <div className="form-success">
