@@ -16,7 +16,7 @@ function Footer() {
               <div className="foot-group-lab">Parte del gruppo</div>
               <div className="foot-logos">
                 <span className="group-mark">Mecaf<span className="m-orange">▪</span></span>
-                <span className="group-mark">Pasini Tech <span className="sfx">s.r.l.</span></span>
+                <a href="http://pasinitech.eu/" target="_blank" rel="noopener noreferrer" className="group-mark">Pasini Tech <span className="sfx">s.r.l.</span></a>
               </div>
             </div>
           </div>
