@@ -1,6 +1,6 @@
 /* ===== pages/Azienda — storia, processo, officina ===== */
 const AZ_VALORI = [
-  ["Passione", "Nasciamo dal lavoro di uomini e aziende che operano con dedizione nella meccanica."],
+  ["Passione", "Mettiamo dedizione in ogni fase della lavorazione, dal disegno al pezzo finito."],
   ["Precisione", "Tolleranze strette e controlli documentati: la qualità è un metodo, non un caso."],
   ["Evoluzione", "Aggiorniamo costantemente competenze e macchinari per seguire ogni settore."],
 ];

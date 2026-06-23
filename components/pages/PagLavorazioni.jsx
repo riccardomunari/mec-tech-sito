@@ -27,7 +27,7 @@ function PageLavorazioni() {
         vlabel="Lavorazioni Meccaniche"
       />
 
-      <Lavorazioni />
+      <Lavorazioni showCta={false} />
 
       <section className="section section-tint" ref={scope} data-screen-label="Materiali">
         <div className="wrap">

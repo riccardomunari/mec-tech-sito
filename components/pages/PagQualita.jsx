@@ -17,7 +17,7 @@ function PageQualita() {
         img="assets/photo-qc-protractor.jpg"
       />
 
-      <Certificazioni />
+      <Certificazioni showIntro={false} />
 
       <section className="section" ref={scope} data-screen-label="Metodo">
         <div className="wrap">

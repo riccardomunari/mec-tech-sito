@@ -10,11 +10,11 @@ const LAVORAZIONI = [
     "assets/photo-parts-drilled.jpg", ["Fori passanti", "Filetti M2–M30", "Inserti"]],
   ["05", "Finitura & trattamenti", "Sbavatura, lucidatura e gestione di trattamenti conto terzi: anodizzazione, zincatura.",
     "assets/photo-forged-parts.jpg", ["Anodizzazione", "Zincatura", "Sabbiatura"]],
-  ["06", "Controllo qualità", "Collaudo dimensionale con strumenti certificati su piano di granito.",
+  ["06", "Controllo qualità", "Collaudo dimensionale con macchina di misura a coordinate e strumenti certificati.",
     "assets/photo-qc-protractor.jpg", ["Metrologia", "Report dimensionale", "100% tracciabile"]],
 ];
 
-function Lavorazioni() {
+function Lavorazioni({ showCta = true } = {}) {
   const scope = MT.useGsap(() => { MT.revealUp(scope.current, { stagger: 0.1 }); }, []);
 
   return (
@@ -28,7 +28,7 @@ function Lavorazioni() {
           <p className="sec-lead section-animate">
             Un ciclo completo di lavorazioni meccaniche per asportazione di truciolo,
             gestito internamente con macchinari di ultima generazione.
-            <br/><a className="accent" style={{ cursor: "pointer", fontWeight: 600 }} onClick={() => navigate("lavorazioni")}>Vedi tutte le lavorazioni →</a>
+            {showCta && <React.Fragment><br/><a className="accent" style={{ cursor: "pointer", fontWeight: 600 }} onClick={() => navigate("lavorazioni")}>Vedi tutte le lavorazioni →</a></React.Fragment>}
           </p>
         </div>
         <div className="lav-grid">
