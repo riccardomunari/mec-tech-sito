@@ -3,8 +3,6 @@ const MACCHINE = [
   ["Centro di lavoro 5 assi", "Fresatura simultanea", "850 × 600 × 500 mm", "12.000 rpm", "±0.005 mm", "4"],
   ["Centro verticale 3 assi", "Fresatura", "1.100 × 600 × 600 mm", "10.000 rpm", "±0.008 mm", "6"],
   ["Tornio CNC bi-mandrino", "Tornitura in ripresa", "Ø 320 × 650 mm", "4.500 rpm", "±0.005 mm", "5"],
-  ["Tornio automatico a fantina", "Tornitura su barra", "Ø 4–32 mm", "8.000 rpm", "±0.004 mm", "3"],
-  ["Rettifica tangenziale", "Rettifica in piano", "600 × 300 mm", "—", "Ra 0.4", "2"],
 ];
 
 function ParcoMacchine() {

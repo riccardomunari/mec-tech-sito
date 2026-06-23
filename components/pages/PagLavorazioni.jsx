@@ -1,6 +1,6 @@
 /* ===== pages/Lavorazioni — servizi + materiali + capacità ===== */
 const MATERIALI = [
-  ["Alluminio", "Leghe 6000 · 7075 · Ergal"],
+  ["Alluminio", "Leghe 6000 · 7075 (Ergal)"],
   ["Acciaio inox", "AISI 303 · 304 · 316"],
   ["Acciai legati", "Bonificati · da cementazione"],
   ["Ottone & rame", "Per particolari elettrici/idraulici"],

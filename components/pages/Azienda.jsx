@@ -17,7 +17,7 @@ function PageAzienda() {
         vlabel="Evolving Precision"
       />
 
-      <ChiSiamo />
+      <ChiSiamo showCta={false} />
 
       <section className="section section-tint" ref={scope} data-screen-label="Valori">
         <div className="wrap">

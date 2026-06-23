@@ -5,7 +5,7 @@ const CS_STATS = [
   ["+", 200, "", "Clienti attivi"],
 ];
 
-function ChiSiamo() {
+function ChiSiamo({ showCta = true } = {}) {
   const scope = MT.useGsap(() => {
     MT.revealUp(scope.current);
     // reveal the diagonal-cut photo with a clip wipe
@@ -45,7 +45,9 @@ function ChiSiamo() {
               costantemente impegnata a seguire l'<b>evoluzione tecnologica</b> in vari campi —
               dal settore moto fino ad ambiti tra loro disparati.
             </p>
-            <a className="btn btn-ghost section-animate" onClick={() => navigate("azienda")}>Scopri l'azienda →</a>
+            {showCta && (
+              <a className="btn btn-ghost section-animate" onClick={() => navigate("azienda")}>Scopri l'azienda →</a>
+            )}
           </div>
         </div>
 
