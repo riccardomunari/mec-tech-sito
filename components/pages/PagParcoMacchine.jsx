@@ -1,9 +1,9 @@
 /* ===== pages/ParcoMacchine — reparti + tabella tecnica ===== */
 const REPARTI = [
-["R1", "Tornitura", "Torni CNC bi-mandrino e automatici a fantina mobile per lavorazioni su barra e in ripresa."],
+["R1", "Tornitura", "Torni CNC bi-mandrino per lavorazioni su barra e in ripresa."],
 ["R2", "Fresatura", "Centri di lavoro a 3, 4 e 5 assi per geometrie complesse e alte tolleranze."],
 ["R3", "Rettifica", "Rettifiche in piano e in tondo per finiture e accoppiamenti critici."],
-["R4", "Controllo", "Sala metrologica con strumenti certificati su piano di granito."]];
+["R4", "Controllo", "Sala metrologica con macchina di misura a coordinate e strumenti certificati."]];
 
 
 function PageParcoMacchine() {

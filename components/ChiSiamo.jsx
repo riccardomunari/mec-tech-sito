@@ -5,7 +5,7 @@ const CS_STATS = [
   ["+", 200, "", "Clienti attivi"],
 ];
 
-function ChiSiamo() {
+function ChiSiamo({ showCta = true } = {}) {
   const scope = MT.useGsap(() => {
     MT.revealUp(scope.current);
     // reveal the diagonal-cut photo with a clip wipe
@@ -35,17 +35,20 @@ function ChiSiamo() {
           </div>
           <div className="cs-copy">
             <div className="eyebrow section-animate">Chi siamo</div>
-            <h2 className="sec-title section-animate">Un'attività giovane e dinamica nella meccanica di precisione</h2>
+            <h2 className="sec-title section-animate">Persone, macchine e un metodo condiviso</h2>
             <p className="section-animate">
-              MecTech nasce dalla fusione di aziende e uomini che operano con passione principalmente
-              nella lavorazione di <b>particolari per il settore metalmeccanico</b>.
+              Realizziamo principalmente <b>particolari per il settore metalmeccanico</b>,
+              mettendo a disposizione dei clienti le capacità acquisite negli anni dai nostri
+              operatori.
             </p>
             <p className="section-animate">
-              Fondata con l'intento di mettere le capacità acquisite al servizio dei clienti, si è
-              costantemente impegnata a seguire l'<b>evoluzione tecnologica</b> in vari campi —
-              dal settore moto fino ad ambiti tra loro disparati.
+              Seguiamo costantemente l'<b>evoluzione tecnologica</b> del settore, investendo in
+              macchinari e competenze per servire ambiti che vanno dal motociclismo a campi tra
+              loro molto disparati.
             </p>
-            <a className="btn btn-ghost section-animate" onClick={() => navigate("azienda")}>Scopri l'azienda →</a>
+            {showCta && (
+              <a className="btn btn-ghost section-animate" onClick={() => navigate("azienda")}>Scopri l'azienda →</a>
+            )}
           </div>
         </div>
 

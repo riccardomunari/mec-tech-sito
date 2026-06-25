@@ -2,7 +2,7 @@
 const METODO = [
   ["01", "Riesame del disegno", "Analisi della documentazione tecnica e definizione del piano di controllo prima della produzione."],
   ["02", "Controllo in processo", "Verifiche dimensionali a bordo macchina durante la lavorazione, con frequenza definita."],
-  ["03", "Collaudo finale", "Misura su piano di granito con calibri, micrometri e goniometri tarati periodicamente."],
+  ["03", "Collaudo finale", "Verifica dimensionale alla macchina di misura a coordinate, con calibri e micrometri tarati periodicamente."],
   ["04", "Tracciabilità", "Ogni lotto è documentato e tracciabile: report dimensionale disponibile su richiesta."],
 ];
 
@@ -17,7 +17,7 @@ function PageQualita() {
         img="assets/photo-qc-protractor.jpg"
       />
 
-      <Certificazioni />
+      <Certificazioni showIntro={false} />
 
       <section className="section" ref={scope} data-screen-label="Metodo">
         <div className="wrap">
