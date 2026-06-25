@@ -9,7 +9,7 @@ const LAVORAZIONI = [
   ["04", "Foratura & filettatura", "Forature profonde, maschiature e filettature su componenti di serie.",
     "assets/photo-parts-drilled.jpg", ["Fori passanti", "Filetti M2–M30", "Inserti"]],
   ["05", "Finitura & trattamenti", "Sbavatura, lucidatura e gestione di trattamenti conto terzi: anodizzazione, zincatura.",
-    "assets/photo-forged-parts.jpg", ["Anodizzazione", "Zincatura", "Sabbiatura"]],
+    "assets/16042026-mectec-34.jpg", ["Anodizzazione", "Zincatura", "Sabbiatura"]],
   ["06", "Controllo qualità", "Collaudo dimensionale con macchina di misura a coordinate e strumenti certificati.",
     "assets/photo-qc-protractor.jpg", ["Metrologia", "Report dimensionale", "100% tracciabile"]],
 ];

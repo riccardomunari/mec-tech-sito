@@ -18,7 +18,7 @@ function PageSettori() {
         eyebrow="Settori"
         title="Al servizio dei settori più disparati"
         sub="La meccanica di precisione, per sua natura, non ha limite ai campi in cui può intervenire. Ecco dove operiamo ogni giorno."
-        img="assets/photo-forged-parts.jpg"
+        img="assets/16042026-mectec-34.jpg"
       />
 
       <section className="section" ref={scope} data-screen-label="Settori">
