@@ -378,10 +378,9 @@ a { color: inherit; }
 .foot-group-lab { font-family: var(--font-mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-500); margin-bottom: 14px; }
 .foot-logos { display: flex; gap: 16px; flex-wrap: wrap; }
 .group-mark {
-  border: 1px solid var(--navy-600); padding: 10px 16px;
-  display: inline-flex; align-items: center;
+  display: inline-flex; align-items: center; min-height: 48px;
 }
-.group-logo { height: 28px; width: auto; display: block; }
+.group-logo { height: 34px; width: auto; display: block; }
 .foot-h { font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--orange-400); margin-bottom: 16px; }
 .foot-col p { color: var(--sky-300); line-height: 1.8; font-size: .97rem; margin: 0; }
 .foot-col a:hover { color: #fff; }
