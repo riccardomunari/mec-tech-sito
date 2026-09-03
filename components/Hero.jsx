@@ -28,7 +28,7 @@ function Hero() {
   }, []);
 
   const STATS = [
-  ["1000", " m²", "Superficie produttiva"],
+  ["2500", " m²", "Superficie produttiva"],
   ["20", "", "Macchinari CNC"],
   ["5.700", "", "Pezzi prodotti · 2024"]];
 
