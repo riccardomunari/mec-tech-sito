@@ -30,7 +30,7 @@ function Hero() {
   const STATS = [
   ["2500", " m²", "Superficie produttiva"],
   ["20", "", "Macchinari CNC"],
-  ["5.700", "", "Pezzi prodotti · 2024"]];
+  ["57.000", "", "Pezzi prodotti · 2025"]];
 
 
   return (
