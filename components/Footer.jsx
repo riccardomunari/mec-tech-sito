@@ -39,7 +39,7 @@ function Footer() {
             <p>
               <a href="mailto:info@mectech.srl">info@mectech.srl</a><br/>
               mectechsrl@pec.it<br/>
-              <a href="tel:+390532731671">0532 731671</a>
+              <a href="tel:+390522667181">0522 667181</a>
             </p>
           </div>
         </div>
