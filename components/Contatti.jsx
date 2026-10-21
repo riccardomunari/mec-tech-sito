@@ -68,7 +68,7 @@ function Contatti() {
               </div>
               <div className="con-block section-animate">
                 <div className="lab">Telefono</div>
-                <div className="val"><a href="tel:+390532731671">0532 731671</a></div>
+                <div className="val"><a href="tel:+390522667181">0522 667181</a></div>
               </div>
             </div>
           </div>
